@@ -12,7 +12,6 @@ export function Header() {
       <div className="flex items-center gap-8">
         <Link
           href={"/#hero"}
-          scroll={false}
           className="text-green-800 hover:underline text-base"
         >
           Início

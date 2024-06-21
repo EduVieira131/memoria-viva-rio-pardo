@@ -25,7 +25,7 @@ export default function Home() {
       <main>
         <section
           id="hero"
-          className="flex items-center justify-between w-full h-[500px]"
+          className="flex items-center justify-between w-full py-40"
         >
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-3 max-w-[500px]">
@@ -61,7 +61,7 @@ export default function Home() {
           />
         </section>
 
-        <section className="mx-auto my-[100px] w-[780px] flex flex-col gap-10">
+        <section className="mx-auto py-40 w-[780px] flex flex-col gap-10">
           <h2 className="font-display leading-[135%] text-2xl text-green-800 font-bold">
             “Uma das melhores experiências que já tive. Locais magníficos,
             passeios interessantes e equipe atenciosa!”
@@ -82,7 +82,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="about" className="my-36 flex flex-col gap-16">
+        <section id="about" className="py-40 flex flex-col gap-16">
           <div className="w-full flex justify-between items-center">
             <div className="flex flex-col gap-4 max-w-[620px]">
               <h2 className="font-display leading-[135%] text-2xl text-green-800 font-bold">
@@ -142,7 +142,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex items-center justify-between w-full h-[500px] bg-sand-100 p-6">
+        <section className="flex items-center justify-between w-full h-[500px] bg-sand-100 p-6 py-40">
           <Image
             src={"/historic-build.png"}
             width={400}
