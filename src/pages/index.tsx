@@ -8,6 +8,12 @@ import { useKeenSlider } from "keen-slider/react";
 import Avatar from "../../public/avatar.svg";
 import CheckIcon from "../../public/check-icon.svg";
 import { Map, User } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   const [sliderRef] = useKeenSlider({
@@ -286,6 +292,32 @@ export default function Home() {
 
               <Button>Adquirir pacote</Button>
             </div>
+          </div>
+        </section>
+
+        <section
+          id="pricing"
+          className="w-full flex flex-col gap-20 py-40 items-center"
+        >
+          <h1 className="font-display text-3xl text-green-800 leading-[135%] font-bold">
+            Perguntas frequentes
+          </h1>
+
+          <div className="w-full flex flex-col gap-6">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem
+                value="item-1"
+                className="bg-gray text-green-800 font-body border border-green-100 p-6 hover:no-underline rounded-2xl"
+              >
+                <AccordionTrigger className="hover:no-underline">
+                  Como ajudo no processo de restauração?
+                </AccordionTrigger>
+                <AccordionContent>
+                  O valor arrecadado com os pacotes acima são direcionados para
+                  a restauração de pontos históricos na cidade.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
       </main>
