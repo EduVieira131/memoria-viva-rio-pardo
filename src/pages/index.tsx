@@ -6,6 +6,7 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 
 import Avatar from "../../public/avatar.svg";
+import CheckIcon from "../../public/check-icon.svg";
 import { Map, User } from "lucide-react";
 
 export default function Home() {
@@ -165,6 +166,125 @@ export default function Home() {
               <Button asChild>
                 <Link href={"/history"}>Ler história de Rio Pardo</Link>
               </Button>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="pricing"
+          className="w-full flex flex-col gap-20 py-40 items-center"
+        >
+          <h1 className="font-display text-3xl text-green-800 leading-[135%] font-bold">
+            Pacotes Disponíveis
+          </h1>
+
+          <div className="w-full flex items-center gap-7">
+            <div className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800">
+              <span className="font-display font-bold text-lg">Basic</span>
+              <h3 className="font-bold text-2xl my-2">R$ 999,99</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda ab sed fugiat natus consequuntur.
+              </p>
+
+              <div className="w-full h-px bg-green-800 my-6"></div>
+
+              <ul className="flex flex-col gap-3 mb-8">
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>All analytics features</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Up to 250,000 tracked visits</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Normal support</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Mobile app</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Up to 3 team members</span>
+                </li>
+              </ul>
+
+              <Button>Adquirir pacote</Button>
+            </div>
+
+            <div className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 bg-sand-100">
+              <span className="font-display font-bold text-lg">Basic</span>
+              <h3 className="font-bold text-2xl my-2">R$ 999,99</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda ab sed fugiat natus consequuntur.
+              </p>
+
+              <div className="w-full h-px bg-green-800 my-6"></div>
+
+              <ul className="flex flex-col gap-3 mb-8">
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>All analytics features</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Up to 250,000 tracked visits</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Normal support</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Mobile app</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Up to 3 team members</span>
+                </li>
+              </ul>
+
+              <Button>Adquirir pacote</Button>
+            </div>
+
+            <div className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800">
+              <span className="font-display font-bold text-lg">Basic</span>
+              <h3 className="font-bold text-2xl my-2">R$ 999,99</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Assumenda ab sed fugiat natus consequuntur.
+              </p>
+
+              <div className="w-full h-px bg-green-800 my-6"></div>
+
+              <ul className="flex flex-col gap-3 mb-8">
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>All analytics features</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Up to 250,000 tracked visits</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Normal support</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Mobile app</span>
+                </li>
+                <li className="flex gap-1 items-center">
+                  <Image src={CheckIcon} alt="" width={26} height={26} />
+                  <span>Up to 3 team members</span>
+                </li>
+              </ul>
+
+              <Button>Adquirir pacote</Button>
             </div>
           </div>
         </section>
