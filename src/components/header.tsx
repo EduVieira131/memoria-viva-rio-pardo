@@ -11,19 +11,23 @@ export function Header() {
 
       <div className="flex items-center gap-8">
         <Link
-          href={"#hero"}
+          href={"/#hero"}
+          scroll={false}
           className="text-green-800 hover:underline text-base"
         >
           Início
         </Link>
         <Link
-          href={"#about"}
+          href={"/#about"}
+          scroll={false}
           className="text-green-800 hover:underline text-base"
         >
           Sobre nós
         </Link>
         <Button asChild>
-          <Link href={"#pricing"}>Ver pacotes</Link>
+          <Link href={"/#pricing"} scroll={false}>
+            Ver pacotes
+          </Link>
         </Button>
       </div>
     </header>
