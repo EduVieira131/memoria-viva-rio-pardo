@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -14,8 +15,13 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
           rel="stylesheet"
         />
+
+        <link rel="shortcut icon" href="favicon.svg" sizes="any" />
       </Head>
-      <body className={`min-h-screen mx-auto max-w-xl px-8 lg:px-16 font-body`}>
+      <body
+        className={`min-h-screen mx-auto max-w-7xl px-8 lg:px-16 font-body leading-[160%] bg-gray`}
+      >
+        <Header />
         <Main />
         <NextScript />
       </body>
