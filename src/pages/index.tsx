@@ -1,7 +1,10 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 
@@ -14,6 +17,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { fadeIn } from "@/lib/variants";
 
 export default function Home() {
   const [sliderRef] = useKeenSlider({
@@ -29,7 +33,10 @@ export default function Home() {
         <title>Início | Memória Viva Rio Pardo</title>
       </Head>
       <main>
-        <section
+        <motion.section
+          variants={fadeIn({ delay: 0.4, direction: "up" })}
+          initial="hidden"
+          whileInView={"show"}
           id="hero"
           className="flex items-center justify-between w-full py-40"
         >
@@ -64,9 +71,14 @@ export default function Home() {
             alt="Imagem da catedral da cidade"
             className="w-[40%]"
           />
-        </section>
+        </motion.section>
 
-        <section className="mx-auto py-40 w-[780px] flex flex-col gap-10">
+        <motion.section
+          variants={fadeIn({ delay: 0.5, direction: "up" })}
+          initial="hidden"
+          whileInView={"show"}
+          className="mx-auto py-40 w-[780px] flex flex-col gap-10"
+        >
           <h2 className="font-display leading-[135%] text-2xl text-green-800 font-bold">
             “Uma das melhores experiências que já tive. Locais magníficos,
             passeios interessantes e equipe atenciosa!”
@@ -85,9 +97,15 @@ export default function Home() {
               <span className="text-sm text-green-600">Empresário</span>
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section id="about" className="py-40 flex flex-col gap-16">
+        <motion.section
+          variants={fadeIn({ delay: 0.5, direction: "up" })}
+          initial="hidden"
+          whileInView={"show"}
+          id="about"
+          className="py-40 flex flex-col gap-16"
+        >
           <div className="w-full flex justify-between items-center">
             <div className="flex flex-col gap-4 max-w-[620px]">
               <h2 className="font-display leading-[135%] text-2xl text-green-800 font-bold">
@@ -145,9 +163,14 @@ export default function Home() {
               />
             </div>
           </div>
-        </section>
+        </motion.section>
 
-        <section className="flex items-center justify-between w-full h-[500px] bg-sand-100 p-6 py-40">
+        <motion.section
+          variants={fadeIn({ delay: 0.5, direction: "up" })}
+          initial="hidden"
+          whileInView={"show"}
+          className="flex items-center justify-between w-full h-[500px] bg-sand-100 p-6 py-40"
+        >
           <Image
             src={"/historic-build.png"}
             width={400}
@@ -173,7 +196,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         <section
           id="pricing"
@@ -184,7 +207,12 @@ export default function Home() {
           </h1>
 
           <div className="w-full flex items-center gap-7">
-            <div className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800">
+            <motion.div
+              variants={fadeIn({ delay: 0.3, direction: "up" })}
+              initial="hidden"
+              whileInView={"show"}
+              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800"
+            >
               <span className="font-display font-bold text-lg">Básico</span>
               <h3 className="font-bold text-2xl my-2">R$ 59,90</h3>
               <p>
@@ -218,9 +246,14 @@ export default function Home() {
               </ul>
 
               <Button>Adquirir pacote</Button>
-            </div>
+            </motion.div>
 
-            <div className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 bg-sand-100">
+            <motion.div
+              variants={fadeIn({ delay: 0.9, direction: "up" })}
+              initial="hidden"
+              whileInView={"show"}
+              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 bg-sand-100"
+            >
               <span className="font-display font-bold text-lg">Plus</span>
               <h3 className="font-bold text-2xl my-2">R$ 109,90</h3>
               <p>
@@ -254,9 +287,14 @@ export default function Home() {
               </ul>
 
               <Button>Adquirir pacote</Button>
-            </div>
+            </motion.div>
 
-            <div className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800">
+            <motion.div
+              variants={fadeIn({ delay: 0.6, direction: "up" })}
+              initial="hidden"
+              whileInView={"show"}
+              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800"
+            >
               <span className="font-display font-bold text-lg">Premium</span>
               <h3 className="font-bold text-2xl my-2">R$ 209,90</h3>
               <p>
@@ -290,7 +328,7 @@ export default function Home() {
               </ul>
 
               <Button>Adquirir pacote</Button>
-            </div>
+            </motion.div>
           </div>
         </section>
 
