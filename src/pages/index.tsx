@@ -39,10 +39,9 @@ export default function Home() {
                 Descubra pontos históricos restaurados
               </h1>
               <p className="text-base text-pretty text-green-800">
-                Conheça pontos históricos da cidade de Rio Pardo enquanto ajuda
-                na restauração de prédios históricos e aprenda sobre esta que é
-                uma cidade de extrema importância histórica para o Rio Grande do
-                Sul.
+                Conheça Rio Pardo enquanto ajuda na restauração de prédios
+                históricos e aprenda sobre esta que é uma cidade de extrema
+                importância histórica para o Rio Grande do Sul.
               </p>
             </div>
 
@@ -186,35 +185,35 @@ export default function Home() {
 
           <div className="w-full flex items-center gap-7">
             <div className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800">
-              <span className="font-display font-bold text-lg">Basic</span>
-              <h3 className="font-bold text-2xl my-2">R$ 999,99</h3>
+              <span className="font-display font-bold text-lg">Básico</span>
+              <h3 className="font-bold text-2xl my-2">R$ 59,90</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda ab sed fugiat natus consequuntur.
+                Plano para aqueles que gostam de relaxar e possuem curiosidade
+                de aprender algo novo.
               </p>
 
               <div className="w-full h-px bg-green-800 my-6"></div>
 
               <ul className="flex flex-col gap-3 mb-8">
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>All analytics features</span>
+                  <span>Visita por diversos locais históricos</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Up to 250,000 tracked visits</span>
+                  <span>Tuor acompanhado por guia turístico</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Normal support</span>
+                  <span>Transporte fornecido pela associação</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Mobile app</span>
+                  <span>Turmas grandes</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Up to 3 team members</span>
+                  <span>Datas e horários pré-definidos</span>
                 </li>
               </ul>
 
@@ -222,35 +221,35 @@ export default function Home() {
             </div>
 
             <div className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 bg-sand-100">
-              <span className="font-display font-bold text-lg">Basic</span>
-              <h3 className="font-bold text-2xl my-2">R$ 999,99</h3>
+              <span className="font-display font-bold text-lg">Plus</span>
+              <h3 className="font-bold text-2xl my-2">R$ 109,90</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda ab sed fugiat natus consequuntur.
+                Plano para os dedicados a história que buscam conhecer mais
+                sobre a cidade.
               </p>
 
               <div className="w-full h-px bg-green-800 my-6"></div>
 
               <ul className="flex flex-col gap-3 mb-8">
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>All analytics features</span>
+                  <span>Visita por diversos locais históricos</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Up to 250,000 tracked visits</span>
+                  <span>Tuor acompanhado por guia turístico</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Normal support</span>
+                  <span>Transporte fornecido pela associação</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Mobile app</span>
+                  <span>Turmas menores</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Up to 3 team members</span>
+                  <span>Palestras em uma casa histórica</span>
                 </li>
               </ul>
 
@@ -258,35 +257,35 @@ export default function Home() {
             </div>
 
             <div className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800">
-              <span className="font-display font-bold text-lg">Basic</span>
-              <h3 className="font-bold text-2xl my-2">R$ 999,99</h3>
+              <span className="font-display font-bold text-lg">Premium</span>
+              <h3 className="font-bold text-2xl my-2">R$ 209,90</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Assumenda ab sed fugiat natus consequuntur.
+                Plano focado em pessoas que atuam na área de história a
+                arquitetura.
               </p>
 
               <div className="w-full h-px bg-green-800 my-6"></div>
 
               <ul className="flex flex-col gap-3 mb-8">
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>All analytics features</span>
+                  <span>Palestras exclusivas</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Up to 250,000 tracked visits</span>
+                  <span>Grupos fechados</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Normal support</span>
+                  <span>Almoço/jantar em uma casa histórica</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Mobile app</span>
+                  <span>Personalização de horários</span>
                 </li>
-                <li className="flex gap-1 items-center">
+                <li className="flex gap-3 text-pretty items-center">
                   <Image src={CheckIcon} alt="" width={26} height={26} />
-                  <span>Up to 3 team members</span>
+                  <span>Tudo que os outros planos oferecem</span>
                 </li>
               </ul>
 
