@@ -203,7 +203,7 @@ export default function Home() {
             width={400}
             height={350}
             alt="Imagem da catedral da cidade"
-            className="w-full max-w-[80%] md:w-[40%]"
+            className="w-full md:w-[40%]"
           />
 
           <div className="flex flex-col gap-6">
@@ -238,7 +238,7 @@ export default function Home() {
               variants={fadeIn({ delay: 0.3, direction: "up" })}
               initial="hidden"
               whileInView={"show"}
-              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 w-full"
+              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 md:w-[55%] lg:w-full mx-auto"
             >
               <span className="font-display font-bold text-lg">Básico</span>
               <h3 className="font-bold text-2xl my-2">R$ 59,90</h3>
@@ -279,7 +279,7 @@ export default function Home() {
               variants={fadeIn({ delay: 0.9, direction: "up" })}
               initial="hidden"
               whileInView={"show"}
-              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 bg-sand-100"
+              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 bg-sand-100 md:w-[55%] lg:w-full mx-auto"
             >
               <span className="font-display font-bold text-lg">Plus</span>
               <h3 className="font-bold text-2xl my-2">R$ 109,90</h3>
@@ -320,7 +320,7 @@ export default function Home() {
               variants={fadeIn({ delay: 0.6, direction: "up" })}
               initial="hidden"
               whileInView={"show"}
-              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800"
+              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 md:w-[55%] lg:w-full mx-auto"
             >
               <span className="font-display font-bold text-lg">Premium</span>
               <h3 className="font-bold text-2xl my-2">R$ 209,90</h3>
