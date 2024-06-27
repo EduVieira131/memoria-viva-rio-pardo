@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <div className="flex items-center justify-between w-full py-8">
-      <span className="text-sm text-green-400 text-pretty">
+      <span className="text-sm text-green-400 text-pretty lg:inline hidden">
         Copyright © 2024 Memória Viva Rio Pardo | Todos os direitos reservados{" "}
       </span>
 

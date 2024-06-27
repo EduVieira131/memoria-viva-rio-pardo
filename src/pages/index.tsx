@@ -23,9 +23,31 @@ import CheckIcon from "../../public/check-icon.svg";
 
 export default function Home() {
   const [sliderRef] = useKeenSlider({
+    mode: "snap",
     slides: {
+      origin: "center",
       perView: 3,
       spacing: 28,
+    },
+    breakpoints: {
+      "(min-width: 300px)": {
+        slides: {
+          perView: 1.2,
+          spacing: 28,
+        },
+      },
+      "(min-width: 768px)": {
+        slides: {
+          perView: 2.2,
+          spacing: 28,
+        },
+      },
+      "(min-width: 1024px)": {
+        slides: {
+          perView: "auto",
+          spacing: 28,
+        },
+      },
     },
   });
 
@@ -41,11 +63,11 @@ export default function Home() {
           initial="hidden"
           whileInView={"show"}
           id="hero"
-          className="flex items-center justify-between w-full py-40"
+          className="flex items-center gap-10 md:justify-between w-full flex-col md:flex-row py-20 md:py-40"
         >
           <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-3 max-w-[500px]">
-              <h1 className="font-display text-3xl text-green-800 leading-[135%] font-bold">
+            <div className="flex flex-col gap-3 w-full md:max-w-[500px]">
+              <h1 className="font-display text-2xl md:text-3xl text-green-800 leading-[135%] font-bold">
                 Descubra pontos históricos restaurados
               </h1>
               <p className="text-base text-pretty text-green-800">
@@ -55,7 +77,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="space-x-3">
+            <div className="md:space-x-3 flex flex-col gap-4 md:gap-0 md:flex-row">
               <Button asChild>
                 <Link href={"#pricing"}>Ver pacotes</Link>
               </Button>
@@ -71,8 +93,10 @@ export default function Home() {
             src={"/hero-image.png"}
             width={400}
             height={350}
+            quality={100}
+            priority
             alt="Imagem da catedral da cidade"
-            className="w-[40%]"
+            className="w-full md:w-[40%]"
           />
         </motion.section>
 
@@ -80,9 +104,9 @@ export default function Home() {
           variants={fadeIn({ delay: 0.5, direction: "up" })}
           initial="hidden"
           whileInView={"show"}
-          className="mx-auto py-40 w-[780px] flex flex-col gap-10"
+          className="mx-auto py-20 md:py-40 w-full md:w-[780px] flex flex-col gap-10"
         >
-          <h2 className="font-display leading-[135%] text-2xl text-green-800 font-bold">
+          <h2 className="font-display leading-[135%] md:text-2xl text-md text-green-800 font-bold text-pretty w-full">
             “Uma das melhores experiências que já tive. Locais magníficos,
             passeios interessantes e equipe atenciosa!”
           </h2>
@@ -96,8 +120,8 @@ export default function Home() {
             />
 
             <div className="flex flex-col gap-1">
-              <span className="text-sm text-green-600">João Silva</span>
-              <span className="text-sm text-green-600">Empresário</span>
+              <span className="text-sm text-green-700">João Silva</span>
+              <span className="text-sm text-green-700">Empresário</span>
             </div>
           </div>
         </motion.section>
@@ -107,11 +131,11 @@ export default function Home() {
           initial="hidden"
           whileInView={"show"}
           id="about"
-          className="py-40 flex flex-col gap-16"
+          className="py-20 md:py-40 flex flex-col gap-16"
         >
-          <div className="w-full flex justify-between items-center">
-            <div className="flex flex-col gap-4 max-w-[620px]">
-              <h2 className="font-display leading-[135%] text-2xl text-green-800 font-bold">
+          <div className="w-full flex flex-col gap-6 md:gap-0 md:flex-row justify-between md:items-center items-start">
+            <div className="flex flex-col gap-4 w-full md:max-w-[420px] lg:max-w-[620px]">
+              <h2 className="font-display leading-[135%] text-xl md:text-2xl text-green-800 font-bold">
                 Aproveite um passeio relaxante enquanto restaura a história
               </h2>
               <p className="text-base text-pretty text-green-800">
@@ -122,16 +146,16 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-6">
-              <div className="flex items-center gap-2">
-                <Map color="#475645" />{" "}
+              <div className="flex items-center gap-2 w-full md:w-fit">
+                <Map color="#475645" className="size-6" />{" "}
                 <span className="text-base text-pretty text-green-800">
                   Passeie pela cidade com um guia
                 </span>
               </div>
 
-              <div className="flex items-center gap-2">
-                <User color="#475645" />{" "}
-                <span className="text-base text-pretty text-green-800">
+              <div className="flex items-center gap-2 w-full lg:w-fit">
+                <User color="#475645" className="size-6" />{" "}
+                <span className="text-base text-pretty text-green-800 max-w-[260px]">
                   Tenha palestras com historiadores renomados
                 </span>
               </div>
@@ -172,19 +196,19 @@ export default function Home() {
           variants={fadeIn({ delay: 0.5, direction: "up" })}
           initial="hidden"
           whileInView={"show"}
-          className="flex items-center justify-between w-full h-[500px] bg-sand-100 p-6 py-40"
+          className="flex flex-col md:flex-row items-center gap-7 lg:gap-0 md:justify-between w-full h-fit md:h-[500px] md:bg-sand-100 p-6 py-20 md:py-40"
         >
           <Image
             src={"/historic-build.png"}
             width={400}
             height={350}
             alt="Imagem da catedral da cidade"
-            className="w-[40%]"
+            className="w-full max-w-[80%] md:w-[40%]"
           />
 
           <div className="flex flex-col gap-6">
-            <div className="flex flex-col gap-3 max-w-[500px]">
-              <h1 className="font-display text-3xl text-green-800 leading-[135%] font-bold">
+            <div className="flex flex-col gap-3 w-full md:max-w-[500px]">
+              <h1 className="font-display text-xl md:text-2xl text-green-800 leading-[135%] font-bold">
                 Um prédio restaurado, uma história renovada
               </h1>
               <p className="text-base text-pretty text-green-800">
@@ -205,16 +229,16 @@ export default function Home() {
           id="pricing"
           className="w-full flex flex-col gap-20 py-40 items-center"
         >
-          <h1 className="font-display text-3xl text-green-800 leading-[135%] font-bold">
+          <h1 className="font-display text-xl md:text-2xl text-green-800 leading-[135%] font-bold">
             Pacotes Disponíveis
           </h1>
 
-          <div className="w-full flex items-center gap-7">
+          <div className="w-full lg:grid lg:grid-cols-3 flex flex-col gap-7">
             <motion.div
               variants={fadeIn({ delay: 0.3, direction: "up" })}
               initial="hidden"
               whileInView={"show"}
-              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800"
+              className="border border-green-300 p-10 rounded-md flex flex-col gap-1 text-green-800 w-full"
             >
               <span className="font-display font-bold text-lg">Básico</span>
               <h3 className="font-bold text-2xl my-2">R$ 59,90</h3>
@@ -248,7 +272,7 @@ export default function Home() {
                 </li>
               </ul>
 
-              <Button>Adquirir pacote</Button>
+              <Button className="mt-auto">Adquirir pacote</Button>
             </motion.div>
 
             <motion.div
@@ -289,7 +313,7 @@ export default function Home() {
                 </li>
               </ul>
 
-              <Button>Adquirir pacote</Button>
+              <Button className="mt-auto">Adquirir pacote</Button>
             </motion.div>
 
             <motion.div
@@ -330,16 +354,13 @@ export default function Home() {
                 </li>
               </ul>
 
-              <Button>Adquirir pacote</Button>
+              <Button className="mt-auto">Adquirir pacote</Button>
             </motion.div>
           </div>
         </section>
 
-        <section
-          id="pricing"
-          className="w-full flex flex-col gap-20 py-40 items-center"
-        >
-          <h1 className="font-display text-3xl text-green-800 leading-[135%] font-bold">
+        <section className="w-full flex flex-col gap-20 py-20 md:py-40 items-center">
+          <h1 className="font-display text-xl md:text-2xl text-green-800 leading-[135%] font-bold">
             Perguntas frequentes
           </h1>
 
@@ -349,10 +370,10 @@ export default function Home() {
                 value="item-1"
                 className="bg-gray text-green-800 font-body border border-green-100 p-6 hover:no-underline rounded-2xl"
               >
-                <AccordionTrigger className="hover:no-underline">
+                <AccordionTrigger className="hover:no-underline text-left text-base font-body">
                   Como ajudo no processo de restauração?
                 </AccordionTrigger>
-                <AccordionContent>
+                <AccordionContent className="font-body text-base border-t border-[#1e1e1e]/10 py-5">
                   O valor arrecadado com os pacotes acima são direcionados para
                   a restauração de pontos históricos na cidade.
                 </AccordionContent>

@@ -10,8 +10,14 @@ import { Button } from "./ui/button";
 export function Header() {
   return (
     <>
-      <header className="flex items-center justify-between w-full py-8 sticky top-0 z-50 bg-gray">
-        <Image src={Logo} alt="Logo" width={72} height={62} />
+      <header className="flex items-center justify-between w-full py-4 lg:py-8 sticky top-0 z-50 bg-gray">
+        <Image
+          src={Logo}
+          alt="Logo"
+          width={62}
+          height={52}
+          className="size-8 md:size-16"
+        />
 
         <div className="hidden lg:flex items-center gap-8">
           <Link href={"/"} className="text-green-800 hover:underline text-base">
@@ -58,7 +64,7 @@ export function Header() {
                 scroll={false}
                 className="text-green-800 hover:underline text-base"
               >
-                Sobre nós
+                Ver pacotes
               </Link>
             </div>
           </SheetContent>
