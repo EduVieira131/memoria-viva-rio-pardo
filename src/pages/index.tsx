@@ -1,23 +1,25 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import "keen-slider/keen-slider.min.css";
+
+import { motion } from "framer-motion";
+import { useKeenSlider } from "keen-slider/react";
+import { Map, User } from "lucide-react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import "keen-slider/keen-slider.min.css";
-import { useKeenSlider } from "keen-slider/react";
 
-import Avatar from "../../public/avatar.svg";
-import CheckIcon from "../../public/check-icon.svg";
-import { Map, User } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 import { fadeIn } from "@/lib/variants";
+
+import Avatar from "../../public/avatar.svg";
+import CheckIcon from "../../public/check-icon.svg";
 
 export default function Home() {
   const [sliderRef] = useKeenSlider({
