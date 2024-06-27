@@ -44,7 +44,7 @@ export function Header() {
             </Button>
           </SheetTrigger>
 
-          <SheetContent className="bg-gray border-none">
+          <SheetContent className="bg-gray border-none w-[300px]">
             <div className="flex flex-col gap-4">
               <Link
                 href={"/"}

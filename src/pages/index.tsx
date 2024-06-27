@@ -327,6 +327,8 @@ export default function Home() {
               <p>
                 Plano focado em pessoas que atuam na área de história a
                 arquitetura.
+                <br />
+                <br />
               </p>
 
               <div className="w-full h-px bg-green-800 my-6"></div>
