@@ -34,6 +34,7 @@ export default function Home() {
       <Head>
         <title>Início | Memória Viva Rio Pardo</title>
       </Head>
+
       <main>
         <motion.section
           variants={fadeIn({ delay: 0.4, direction: "up" })}

@@ -1,11 +1,8 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
-
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="pt-br">
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
@@ -23,10 +20,8 @@ export default function Document() {
       <body
         className={`min-h-screen mx-auto max-w-7xl px-8 lg:px-16 font-body leading-[160%] bg-gray relative`}
       >
-        <Header />
         <Main />
         <NextScript />
-        <Footer />
       </body>
     </Html>
   );
