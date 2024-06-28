@@ -1,7 +1,9 @@
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useState } from "react";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -9,10 +11,37 @@ import Logo from "../../public/logo.svg";
 import { Button } from "./ui/button";
 
 export function Header() {
+  const [hidden, setHidden] = useState<boolean>(false);
+
   const router = useRouter();
+
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    if (previous && latest > previous && latest > 150) {
+      setHidden(true);
+      return;
+    }
+
+    setHidden(false);
+    return;
+  });
+
   return (
     <>
-      <header className="flex items-center justify-between w-full py-4 lg:py-8 sticky top-0 z-50 bg-gray">
+      <motion.header
+        variants={{
+          visible: { y: 0 },
+          hidden: { y: "-100%" },
+        }}
+        animate={hidden ? "hidden" : "visible"}
+        transition={{
+          duration: 0.4,
+          ease: "easeIn",
+        }}
+        className="flex items-center justify-between w-full py-4 lg:py-8 sticky top-0 left-0 z-50 bg-gray"
+      >
         <Image
           src={Logo}
           alt="Logo"
@@ -27,23 +56,19 @@ export function Header() {
           </Link>
           <Link
             href={router.pathname === "/history" ? "/" : "/#about"}
-            scroll={false}
             className="text-green-800 hover:underline text-base"
           >
             Sobre nós
           </Link>
           <Link
             href={"/history"}
-            scroll={false}
+            scroll={true}
             className="text-green-800 hover:underline text-base"
           >
             Sobre Rio Pardo
           </Link>
           <Button asChild>
-            <Link
-              href={router.pathname === "/history" ? "/" : "/#pricing"}
-              scroll={false}
-            >
+            <Link href={router.pathname === "/history" ? "/" : "/#pricing"}>
               Ver pacotes
             </Link>
           </Button>
@@ -66,21 +91,19 @@ export function Header() {
               </Link>
               <Link
                 href={router.pathname === "/history" ? "/" : "/#about"}
-                scroll={false}
                 className="text-green-800 hover:underline text-base"
               >
                 Sobre nós
               </Link>
               <Link
                 href={"/history"}
-                scroll={false}
+                scroll={true}
                 className="text-green-800 hover:underline text-base"
               >
                 Sobre Rio Pardo
               </Link>
               <Link
                 href={router.pathname === "/history" ? "/" : "/#pricing"}
-                scroll={false}
                 className="text-green-800 hover:underline text-base"
               >
                 Ver pacotes
@@ -88,7 +111,7 @@ export function Header() {
             </div>
           </SheetContent>
         </Sheet>
-      </header>
+      </motion.header>
     </>
   );
 }
