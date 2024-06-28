@@ -1,6 +1,7 @@
 import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -8,6 +9,7 @@ import Logo from "../../public/logo.svg";
 import { Button } from "./ui/button";
 
 export function Header() {
+  const router = useRouter();
   return (
     <>
       <header className="flex items-center justify-between w-full py-4 lg:py-8 sticky top-0 z-50 bg-gray">
@@ -24,14 +26,24 @@ export function Header() {
             Início
           </Link>
           <Link
-            href={"#about"}
+            href={router.pathname === "history" ? "/" : "#about"}
             scroll={false}
             className="text-green-800 hover:underline text-base"
           >
             Sobre nós
           </Link>
+          <Link
+            href={"/history"}
+            scroll={false}
+            className="text-green-800 hover:underline text-base"
+          >
+            Sobre Rio Pardo
+          </Link>
           <Button asChild>
-            <Link href={"#pricing"} scroll={false}>
+            <Link
+              href={router.pathname === "/history" ? "/" : "#princing"}
+              scroll={false}
+            >
               Ver pacotes
             </Link>
           </Button>
@@ -44,7 +56,7 @@ export function Header() {
             </Button>
           </SheetTrigger>
 
-          <SheetContent className="bg-gray border-none w-[300px]">
+          <SheetContent className="bg-gray border-none w-[300px] pt-10">
             <div className="flex flex-col gap-4">
               <Link
                 href={"/"}
@@ -53,14 +65,21 @@ export function Header() {
                 Início
               </Link>
               <Link
-                href={"#about"}
+                href={router.pathname === "/history" ? "/" : "#about"}
                 scroll={false}
                 className="text-green-800 hover:underline text-base"
               >
                 Sobre nós
               </Link>
               <Link
-                href={"#pricing"}
+                href={"/history"}
+                scroll={false}
+                className="text-green-800 hover:underline text-base"
+              >
+                Sobre Rio Pardo
+              </Link>
+              <Link
+                href={router.pathname === "/history" ? "/" : "#princing"}
                 scroll={false}
                 className="text-green-800 hover:underline text-base"
               >
