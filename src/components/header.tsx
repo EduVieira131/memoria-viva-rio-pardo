@@ -41,7 +41,7 @@ export function Header() {
           </Link>
           <Button asChild>
             <Link
-              href={router.pathname === "/history" ? "/" : "/#princing"}
+              href={router.pathname === "/history" ? "/" : "/#pricing"}
               scroll={false}
             >
               Ver pacotes
@@ -79,7 +79,7 @@ export function Header() {
                 Sobre Rio Pardo
               </Link>
               <Link
-                href={router.pathname === "/history" ? "/" : "/#princing"}
+                href={router.pathname === "/history" ? "/" : "/#pricing"}
                 scroll={false}
                 className="text-green-800 hover:underline text-base"
               >
